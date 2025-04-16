@@ -1,12 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Triodion&display=swap" rel="stylesheet">
+    <title>Христо Смирненски</title>
 </head>
 <body>
+    <div class="background-wrapper"></div>
+    
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/img3.gif" alt="Лого" class="logo-img"></a>      
+        </div>
+        <ul class="navbar-list">
+            <li class="navbar-item"><a href="index.html">Начало</a></li>
+            <li class="navbar-item"><a href="biography.html">Биография</a></li>
+            <li class="navbar-item"><a href="works.html">Творчество</a></li>
+            <li class="navbar-item"><a href="gallery.html">Галерия</a></li>
+            <li class="navbar-item"><a href="contacts.html">Контакти</a></li>
+        </ul>
+    </nav>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+    <section class="container">
+        <div class="background-text">Христо Смирненски</div>
+        <div class="frame">
+            <img src="img/img2.png" alt="Рамка" class="frame-img">
+            <div class="photo-container">
+                <img src="img/img1.jpg" alt="Христо Смирненски" class="photo">
+            </div>
+        </div>
+    </section>
 
+    <section class="start-text">
+        <span class="line"></span>
+        <div class="start-text-content">
+            <h2>На Кратко</h2>
+            <p>Христо Димитров Измирлиев с псевдоним Христо Смирненски е български поет и журналист. Основна тема в творчеството му е социалната несправедливост.</p>
+        </div>
+    </section>
+
+    <section class="cards-section">
+        <h2 class="cards-heading">Популярни Новини</h2>
+        <div class="cards-container">
+            <!-- Card 1 with link -->
+            <a href="https://www.facebook.com/SMIRNENSKI.HRISTO" target="_blank" class="card">
+                <img src="img/img4.jpg" alt="Христо Смирненски" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title">Христо Смирненски Фейсбук</h3>
+                    <p class="card-description">Да бъде Ден!</p>
+                </div>
+            </a>
+    
+            <!-- Card 2 with link -->
+            <a href="https://kulturni-novini.info/sections/25/news/39843-natsionalniyat-literaturen-muzey-otbelyazva-126-godini-ot-rozhdenieto-na-hristo-smirnenski" target="_blank" class="card">
+                <img src="img/img5.jpg" alt="Христо Смирненски" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title">Националният литературен музей отбелязва 126 години от рождението на Христо Смирненски</h3>
+                    <p class="card-description">Литературно-музикална вечер на 26 септември 2024 г. от 18 часа в двора на къща музей „Христо Смирненски" - София</p>
+                </div>
+            </a>
+    
+            <!-- Card 3 with link -->
+            <a href="https://www.facebook.com/groups/424065232770729/posts/956558036188110/" target="_blank" class="card">
+                <img src="img/img6.jpg" alt="Христо Смирненски" class="card-img">
+                <div class="card-content">
+                    <h3 class="card-title">Конкурс за поезия и проза - " Яна Язова - Христо Смирненски"</h3>
+                    <p class="card-description">За участници до 35 г.
+                        Краен срок: 01.02.24 г.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Get the hamburger and navbar list
+        const hamburger = document.getElementById('hamburger');
+        const navbarList = document.querySelector('.navbar-list');
+    
+        // Toggle the "active" class on click
+        hamburger.addEventListener('click', () => {
+            navbarList.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

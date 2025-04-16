@@ -1,0 +1,453 @@
+.triodion-regular {
+    font-family: "Triodion", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none; /* Disable selection for all elements */
+}
+
+body {
+    font-family: "Triodion", serif;
+    color: white;
+    min-height: 100vh; /* Minimum height of the viewport */
+    display: flex;
+    flex-direction: column; /* Stack the sections vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+p {
+    font-size: 1.4rem;
+    text-align: justify;
+    padding-inline: 10vh;
+    padding-top: 5vh;
+}
+    
+.background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom right, #b29173, #8a5d33, #f1d99f);
+    z-index: -1; /* Place the gradient behind content */
+    height: 120vh;
+}
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 10; /* Make sure navbar is on top of the content */
+}
+
+.logo {
+    margin-left: 2rem; /* Space between the logo and the left edge */
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 5rem; /* Adjust the size of the logo */
+    width: auto;
+    filter: invert(1); /* Inverts black to white */
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar-item {
+    margin: 0 1rem;
+}
+
+.navbar-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    font-family: Triodion;
+}
+
+.navbar-item a:hover {
+    color: #9c9c9c;
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    margin-bottom: 2.9%;
+    display: block; /* Ensure it takes the full width */
+    padding: 2rem 0; /* Some padding around the content */
+}
+
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12rem; /* Huge text size */
+    color: rgba(0, 0, 0, 0.5); /* Light grey color for the text */
+    z-index: 0; /* Place it behind the frame and photo */
+    font-weight: bold;
+    text-transform: uppercase; /* Optional: make it all uppercase */
+    font-family: Triodion;
+    filter: blur(5px);
+}
+
+.frame {
+    margin-top: 6%;
+    position: relative;
+}
+
+.frame-img {
+    width: 40%; /* Size of the frame */
+    height: 20%;
+    min-height: 250px;
+    min-width: 200px;
+    object-fit: cover;
+}
+
+.photo-container {
+    position: absolute;
+    top: 42%;
+    left: 49.7%;
+    transform: translate(-50%, -50%);
+    width: 20%; /* Adjust the size of the photo inside the frame */
+    height: 66%;
+    min-height: 175px;
+    min-width: 165px;
+    overflow: hidden;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1{
+    color: #000;
+    font-size: 200em;
+}
+
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: absolute;
+    
+    right: 5%;
+    margin-top: 2%;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.start-text {
+    display: block; /* Ensure it's block level */
+    padding: 3rem 2rem;
+    background-color: #8a5d33; /* Light background color */
+    width: 100%; /* Full width */
+    text-align: center; /* Center the content inside */
+    padding-top: 2rem; /* Add some space between sections */
+    clear: both; /* Ensures it's not overlapping the previous section */
+}
+
+/* The content inside brief-intro (h2 and p) */
+.start-text-content {
+    text-align: start;
+    display: flex;
+    max-width: 1500px; /* Optional: Limit the width */
+    margin: 0 auto; /* Center the content horizontally */
+    width: 100%;
+    margin-top: 1%;
+}
+
+/* Style for the h2 element */
+.start-text-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem; /* Space below the h2 */
+    width: 45%; 
+}
+
+/* Style for the p element */
+.start-text-content p {
+    width: 100%; /* Ensure the paragraph takes full width */
+    padding: 0;
+}
+
+.end{
+    text-align: end;
+}
+
+.padding-top{
+    padding-top: 5%;
+}
+
+/* Style for the dividing line */
+.line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: #ccc; /* Light grey line */
+    display: flex;
+}
+
+/* Cards Section */
+.cards-section {
+    width: 100%;
+    padding: 3rem 2rem;
+    background-color: #f1d99f;
+    text-align: center;
+}
+
+.cards-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #8a5d33;
+    margin-bottom: 2rem;
+}
+
+/* Container for the cards */
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Individual Card */
+.card {
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Inside the Card */
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+    padding-block: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Gallery Section Styling */
+.gallery {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Grid Container */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid Items */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.gallery-item:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* General styling */
+.contact-us {
+    color: white;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+/* Header */
+.contact-us h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Description */
+.contact-us p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Contact Info Section */
+.contact-info {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Contact Item Styling */
+.contact-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contact-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1em;
+        padding-top: 0.5em;
+    }
+
+    .logo-img {
+        height: 45px;
+    }
+
+    .navbar-list {
+        display: none; /* Hide the navbar links by default on mobile */
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar-item {
+        margin: 0.5em 0;
+    }
+
+    .navbar-item a {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+     /* Show hamburger icon on small screens */
+     .hamburger {
+        display: flex;
+    }
+
+    /* Show the navbar list when the menu is active */
+    .navbar-list.active {
+        display: flex;
+    }
+
+    .card {
+        width: 45%; /* Adjust width for smaller screens */
+    }
+
+    .start-text-content {
+        display: flex;
+        flex-direction: column; /* Stack the h2 and p elements vertically */
+        align-items: center; /* Optional: Center the content */
+    }
+
+    .start-text-content h2 {
+        width: 100%; /* Make sure h2 takes full width */
+        text-align: center; /* Optional: Center the heading text */
+    }
+
+    .padding-top{
+        padding-top: 15%;
+    }
+
+    .contact-us {
+        padding: 2rem 1rem;
+    }
+
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+}
